@@ -1,5 +1,5 @@
 {
-  "name": "date-ranger",
+  "name": "@databased/date-ranger",
   "version": "1.0.0",
   "description": "An npm package internal to DataBased with date utility functions.",
   "main": "index.js",
@@ -10,7 +10,6 @@
   },
   "license": "ISC",
   "author": "DataBased",
-  "private": true,
   "jest": {
     "coverageDirectory": "<rootDir>/coverage",
     "coverageReporters": [
@@ -65,5 +64,16 @@
     "js-cookie": "^2.2.1",
     "regenerator-runtime": "^0.13.5",
     "yarn": "^1.22.4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/databased/date-ranger.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/databased/date-ranger/issues"
+  },
+  "homepage": "https://gitlab.com/databased/date-ranger#readme"
 }
