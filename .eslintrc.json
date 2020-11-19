@@ -1,0 +1,52 @@
+{
+  "env": {
+    "browser": false,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "arrow-body-style": "off",
+    "arrow-parens": "off",
+    "class-methods-use-this": "off",
+    "comma-dangle": ["error", "never"],
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "max-len": "off",
+    "no-confusing-arrow": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-continue": "off",
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off",
+    "no-warning-comments": "warn", // no todo's or fixme's
+    "require-atomic-updates": "off", // See https://github.com/eslint/eslint/issues/11899
+    "semi": ["error", "never"],
+    "@typescript-eslint/no-unused-vars": "error", // fixes jsx error
+    "import/no-unresolved": "off",
+    "import/newline-after-import": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts"],
+      "rules": {"no-undef": "off"} // error with eslint, TS already checks for this so disabling
+    },
+    {
+      "files": ["src/**/*.ts"],
+      "rules": {"camelcase": "off"} // the database has some underscored vars
+    }
+  ]
+}

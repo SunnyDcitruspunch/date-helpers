@@ -4,8 +4,66 @@
   "description": "An npm package internal to DataBased with date utility functions.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint && jest --runInBand --coverage",
+    "test-changes": "npm t && diff-cover coverage/cobertura-coverage.xml --json-report /dev/stdout",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --ignore-pattern '*.test.*'"
   },
+  "license": "ISC",
   "author": "DataBased",
-  "license": "ISC"
+  "private": true,
+  "jest": {
+    "coverageDirectory": "<rootDir>/coverage",
+    "coverageReporters": [
+      "cobertura",
+      "html",
+      "text"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "preset": "ts-jest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-decorators": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-typescript": "^7.10.1",
+    "@types/jest": "^26.0.3",
+    "@types/node": "^14.0.13",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "glob": "^7.1.6",
+    "jest": "^26.0.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "standard-version": "^8.0.0",
+    "ts-jest": "^26.1.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "js-cookie": "^2.2.1",
+    "regenerator-runtime": "^0.13.5",
+    "yarn": "^1.22.4"
+  }
 }
