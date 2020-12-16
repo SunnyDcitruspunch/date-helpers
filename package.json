@@ -1,5 +1,5 @@
 {
-  "name": "@databased/date-ranger",
+  "name": "date-helpers",
   "version": "1.0.0",
   "description": "An npm package internal to DataBased with date utility functions.",
   "main": "index.js",
