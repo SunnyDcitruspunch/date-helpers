@@ -70,13 +70,5 @@
   },
   "directories": {
     "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/databased/date-ranger.git"
-  },
-  "bugs": {
-    "url": "https://gitlab.com/databased/date-ranger/issues"
-  },
-  "homepage": "https://gitlab.com/databased/date-ranger#readme"
+  }
 }
