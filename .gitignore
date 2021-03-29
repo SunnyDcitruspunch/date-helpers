@@ -62,8 +62,6 @@ typings/
 .idea/
 
 # Webpack transpiled, minified content
-dist/
-server-dist/
 .cache/
 
 # Mac files

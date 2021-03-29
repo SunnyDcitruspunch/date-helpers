@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "outDir": "lib",
+    "outDir": "./dist",
     "sourceMap": true,
     "jsx": "react",
     "module": "es6",
@@ -18,6 +18,5 @@
   "lib": ["es6", "es2017.string"],
   "include": [
     "./src/"
-  ],
-  "exclude": ["./src/**/*.test.ts"]
+  ]
 }
