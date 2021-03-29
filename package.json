@@ -1,9 +1,10 @@
 {
-  "name": "date-helpers",
+  "name": "@sunnydcitruspunch/date-helpers",
   "version": "1.0.0",
   "description": "An npm package internal to DataBased with date utility functions.",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf lib && tsc -p .",
     "test": "npm run lint && jest --runInBand --coverage",
     "test-changes": "npm t && diff-cover coverage/cobertura-coverage.xml --json-report /dev/stdout",
     "lint": "eslint 'src/**/*.{ts,tsx}' --ignore-pattern '*.test.*'"
@@ -32,17 +33,10 @@
     "preset": "ts-jest"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.2",
-    "@babel/plugin-proposal-decorators": "^7.10.1",
-    "@babel/plugin-transform-runtime": "^7.10.1",
-    "@babel/preset-env": "^7.10.2",
-    "@babel/preset-typescript": "^7.10.1",
     "@types/jest": "^26.0.3",
     "@types/node": "^14.0.13",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
-    "babel-jest": "^26.0.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -56,6 +50,7 @@
     "prettier": "^1.19.1",
     "standard-version": "^8.0.0",
     "ts-jest": "^26.1.0",
+    "tslint-config-standard": "^8.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6"
   },
